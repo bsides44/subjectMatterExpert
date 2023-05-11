@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexpert</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 40%, rgba(212,212,212,1) 100%);
+            width:100%
+        }
+
+        .spinner {
+          border: 8px solid rgba(162, 186, 255, 0.3);
+          border-left: 8px solid #3a60cc;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <div class="container mx-auto p-4 text-center">
+        <h1 class="text-4xl text-gray-800 text-center mt-10 mb-10 font-semibold">Find Top Thinkers on Your Subject</h1>
+        <form id="thinkers-form" class="text-gray-800 text-center">
+            <div class="mb-4">
+                <label for="subject" class="block mb-2">Enter a Topic</label>
+                <input type="text" id="subject" class="w-full lg:w-96 bg-white text-gray-800 p-2 rounded shadow-md">
+            </div>
+            <button type="submit" class="bg-indigo-600 text-white py-2 px-8 rounded-lg shadow-md hover:bg-indigo-700">Discover Top Minds</button>
+        </form>
+        <div id="loading" class="hidden mt-5 text-center flex justify-center">
+            <div class="spinner"></div>
+        </div>
+        <pre id="output" class="text-gray-800 text-lg mt-10 text-left whitespace-pre-wrap m-5 font-sans"> </pre>
+
+        <button id="summarize-button" class="bg-indigo-600 text-white py-2 px-8 rounded-lg shadow-md hover:bg-indigo-700 hidden mt-5">Research Summary</button>
+        <div id="loading" class="hidden mt-5 text-center flex justify-center">
+            <div class="spinner"></div>
+        </div>
+        <div class="resText">
+
+        <pre id="summary" class="text-gray-800 text-lg mt-10 text-left whitespace-pre-wrap m-5 font-sans"></pre>
+        </div>
+        <footer class="text-gray-800 text-center mt-auto py-4">
+            <p>Powered by AI</p>
+            <a href="https://www.maddyking44.com" target="_blank" rel="noopener noreferrer" class="hover:underline">www.MaddyKing44.com</a>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("thinkers-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const subject = document.getElementById("subject").value;
+            const prompt = `Who are the top 10 thinkers on ${subject}`;
+            console.log(prompt);
+
+            const loading = document.getElementById("loading");
+            const output = document.getElementById("output");
+            loading.classList.remove("hidden");
+            output.textContent = "";
+
+            const response = await fetch(`https://a.picoapps.xyz/ask-ai?prompt=${encodeURIComponent(prompt)}`);
+            const data = await response.json();
+            console.log(data.response);
+
+            loading.classList.add("hidden");
+            output.textContent = data.response;
+            document.getElementById("summarize-button").classList.remove("hidden");
+        });
+
+        document.getElementById("summarize-button").addEventListener("click", async () => {
+            const thinkers = document.getElementById("output").textContent.split("\n").filter(t => t.trim() !== "");
+            const summary = document.getElementById("summary");
+            summary.textContent = "";
+
+            for (const thinker of thinkers) {
+                const prompt = `What is a brief summary of the research of ${thinker}?`;
+                const response = await fetch(`https://a.picoapps.xyz/ask-ai?prompt=${encodeURIComponent(prompt)}`);
+                const data = await response.json();
+                console.log(data.response);
+
+                summary.textContent += `${thinker}:\n${data.response}\n\n`;
+            }
+        });
+    </script>
+</body>
+</html>
