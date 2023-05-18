@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easter Egg- Mono Tone
+* source:	https://sketchfab.com/3d-models/easter-egg-mono-tone-10df30f3c0634280a66659ee94c04032
+* author:	GarethHughes (https://sketchfab.com/GarethHughes)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easter Egg- Mono Tone" (https://sketchfab.com/3d-models/easter-egg-mono-tone-10df30f3c0634280a66659ee94c04032) by GarethHughes (https://sketchfab.com/GarethHughes) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

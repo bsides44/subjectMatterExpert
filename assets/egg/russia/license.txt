@@ -1,0 +1,11 @@
+Model Information:
+* title:	Egg 2018 Wiki
+* source:	https://sketchfab.com/3d-models/egg-2018-wiki-407010d272e34955836ce57ad8f51db4
+* author:	ayvlasov (https://sketchfab.com/ayvlasov)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Egg 2018 Wiki" (https://sketchfab.com/3d-models/egg-2018-wiki-407010d272e34955836ce57ad8f51db4) by ayvlasov (https://sketchfab.com/ayvlasov) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

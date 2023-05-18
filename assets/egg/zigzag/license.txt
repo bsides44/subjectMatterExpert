@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easter Egg- Zig Zaggey
+* source:	https://sketchfab.com/3d-models/easter-egg-zig-zaggey-996783d5b3064402b3e1b5f1699094fd
+* author:	GarethHughes (https://sketchfab.com/GarethHughes)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easter Egg- Zig Zaggey" (https://sketchfab.com/3d-models/easter-egg-zig-zaggey-996783d5b3064402b3e1b5f1699094fd) by GarethHughes (https://sketchfab.com/GarethHughes) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

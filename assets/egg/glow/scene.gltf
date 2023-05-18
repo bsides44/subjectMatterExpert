@@ -1,0 +1,476 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 491,
+      "max": [
+        1.0,
+        1.0,
+        1.3910093307495117
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.180086612701416
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 5892,
+      "componentType": 5126,
+      "count": 491,
+      "max": [
+        0.9999945163726807,
+        0.9999945163726807,
+        1.0
+      ],
+      "min": [
+        -0.9999945163726807,
+        -0.9999945163726807,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 491,
+      "max": [
+        1.0,
+        1.0000001192092896
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 2304,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "kjinks (https://sketchfab.com/kjinks)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/easter-egg-1bd870512aff40efba5678a97e7b05f4",
+      "title": "Easter Egg"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 9216,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3928,
+      "byteOffset": 9216,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11784,
+      "byteOffset": 13144,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 24928,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_clearcoat"
+  ],
+  "images": [
+    {
+      "uri": "textures/Veins_baseColor.png"
+    },
+    {
+      "uri": "textures/Veins_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Veins_clearcoat_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 0.9316366961,
+          "clearcoatNormalTexture": {
+            "index": 2,
+            "scale": 0.2909181332
+          },
+          "clearcoatRoughnessFactor": 0.1052893907
+        }
+      },
+      "name": "Veins",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Egg.000_Veins_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "7ab21c9e8fc744c8b6b90ecadcfe9e53.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        15
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.9470721841536002e-05,
+        0.0,
+        -100.00001525878717,
+        0.0,
+        8.842778662641225e-12,
+        100.00001525878906,
+        1.7217525736526904e-18,
+        0.0,
+        99.99999999999811,
+        -8.842777313340655e-12,
+        1.9470718870540082e-05,
+        0.0,
+        -6.504722841782495e-05,
+        127.92172241210938,
+        372.0267639160156,
+        1.0
+      ],
+      "name": "Camera"
+    },
+    {
+      "name": "Object_4"
+    },
+    {
+      "children": [
+        6,
+        9,
+        12
+      ],
+      "matrix": [
+        93.44242328101795,
+        -22.407860163845143,
+        -27.683954454677117,
+        0.0,
+        30.811153840661547,
+        89.8479340142255,
+        31.2733117290705,
+        0.0,
+        17.865782533164072,
+        -37.75228899635061,
+        90.86021401038914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Lights"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        0.9541194290488378,
+        -0.033394498924028355,
+        0.29755806717991484,
+        0.0,
+        -0.17679629085770696,
+        0.7392079790123908,
+        0.6498572126896871,
+        0.0,
+        -0.2416589966808301,
+        -0.672648675605902,
+        0.6993887963992851,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Key"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Object_7"
+    },
+    {
+      "name": "Object_8"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        0.9417665474697396,
+        0.3320717136565226,
+        -0.052954197719793344,
+        0.0,
+        0.10395660377136187,
+        -0.4372753707338748,
+        -0.8932989624214905,
+        0.0,
+        -0.3197949218212609,
+        0.8357742407796546,
+        -0.44633241695683035,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Rim"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Object_10"
+    },
+    {
+      "name": "Object_11"
+    },
+    {
+      "children": [
+        13
+      ],
+      "matrix": [
+        0.9642423181809576,
+        0.20548947409273643,
+        -0.1673640004804419,
+        0.0,
+        0.2614813591276027,
+        -0.6347726312357838,
+        0.7271115495319689,
+        0.0,
+        0.043175682960961866,
+        -0.7448742924115125,
+        -0.6658063004328035,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Fill"
+    },
+    {
+      "children": [
+        14
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Object_13"
+    },
+    {
+      "name": "Object_14"
+    },
+    {
+      "children": [
+        16
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -4.371139006309477e-06,
+        -99.9999999999999,
+        0.0,
+        0.0,
+        99.9999999999999,
+        -4.371139006309477e-06,
+        0.0,
+        3.062748987758823e-07,
+        118.00865936279297,
+        -8.820717312119086e-07,
+        1.0
+      ],
+      "name": "Egg.000"
+    },
+    {
+      "mesh": 0,
+      "name": "Egg.000_Veins_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

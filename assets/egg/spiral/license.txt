@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easter Egg- Spiraley
+* source:	https://sketchfab.com/3d-models/easter-egg-spiraley-51669e8ffba143a8a830e007aa564e46
+* author:	GarethHughes (https://sketchfab.com/GarethHughes)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easter Egg- Spiraley" (https://sketchfab.com/3d-models/easter-egg-spiraley-51669e8ffba143a8a830e007aa564e46) by GarethHughes (https://sketchfab.com/GarethHughes) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easter Egg
+* source:	https://sketchfab.com/3d-models/easter-egg-1bd870512aff40efba5678a97e7b05f4
+* author:	kjinks (https://sketchfab.com/kjinks)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easter Egg" (https://sketchfab.com/3d-models/easter-egg-1bd870512aff40efba5678a97e7b05f4) by kjinks (https://sketchfab.com/kjinks) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

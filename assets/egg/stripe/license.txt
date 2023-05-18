@@ -1,0 +1,11 @@
+Model Information:
+* title:	Easter Egg - Stripy
+* source:	https://sketchfab.com/3d-models/easter-egg-stripy-ba789525a275425f833e313d7b5b9cf0
+* author:	GarethHughes (https://sketchfab.com/GarethHughes)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Easter Egg - Stripy" (https://sketchfab.com/3d-models/easter-egg-stripy-ba789525a275425f833e313d7b5b9cf0) by GarethHughes (https://sketchfab.com/GarethHughes) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
