@@ -1,350 +1,134 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Maddy's Easter Game</title>
-  <meta name="description" content="Interactive 360 video-based Easter egg game in web vr using aframe for webxr">
-  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-  <link rel="icon" href="./assets/favicon-16.png" sizes="16x16">
-  <link rel="icon" href="./assets/favicon-32.png" sizes="32x32">
-  <link rel="icon" href="./assets/favicon-64.png" sizes="64x64">
-  <link rel="icon" href="./assets/favicon-128.png" sizes="128x128">
-  <link rel="icon" href="./assets/favicon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="./assets/favicon-180.png">
-  <script src="./js/init-scene-one.js"></script>
-  <script src="./js/on-click-start.js"></script>
-  <script src="./js/button-hover.js"></script>
-  <script src="./js/play-video.js"></script>
-  <script src="./js/on-click-end.js"></script>
-  <script src="./js/select-egg.js"></script>
-  <script src="./js/egg-appear.js"></script>
-  <script src="./js/move-into-vr.js"></script>
+	<meta charset="utf-8">
+	<title>Maddy's Easter Game</title>
+	<meta name="description" content="Interactive 360 video-based Easter egg game in web vr using aframe for webxr">
+	<script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+	<link rel="icon" href="./assets/favicon-16.png" sizes="16x16">
+	<link rel="icon" href="./assets/favicon-32.png" sizes="32x32">
+	<link rel="icon" href="./assets/favicon-64.png" sizes="64x64">
+	<link rel="icon" href="./assets/favicon-128.png" sizes="128x128">
+	<link rel="icon" href="./assets/favicon-192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="./assets/favicon-180.png">
+	<script src="./js/init-scene-one.js"></script>
+	<script src="./js/on-click-start.js"></script>
+	<script src="./js/button-hover.js"></script>
+	<script src="./js/play-video.js"></script>
+	<script src="./js/on-click-end.js"></script>
+	<script src="./js/select-egg.js"></script>
+	<script src="./js/egg-appear.js"></script>
+	<script src="./js/move-into-vr.js"></script>
 
 </head>
 <style>
-  .a-loader-title {
-    color: white;
-    background-color: white;
-  }
+	.a-loader-title {
+		color: white;
+		background-color: white;
+	}
 </style>
+
 <body>
-  <a-scene id="scene" loading-screen="dotsColor: black; backgroundColor: white"  shadow="enabled; autoUpdate: true" renderer="antialias: true"
-  webxr="referenceSpaceType: local"  
-  move-into-vr
-  init-scene-one
-  >
-    <a-assets timeout="3000">
-		<!-- https://cdn.tangerinium.nz/ -->
-        <video id="intro" preload="true" src="./assets/vids/intro-265.mp4" autoplay="false" muted loop="false" crossOrigin="anonymous" ></video>
-        <video id="eeOutdoor" preload="auto" src="./assets/vids/ee1-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="sing1" preload="auto" src="./assets/vids/sing1-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-       	<video id="eeIndoorOne" preload="auto" src="./assets/vids/ee21-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="sing2" preload="auto" src="./assets/vids/sing2-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="articulate" preload="auto" src="./assets/vids/articulate-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="sing3" preload="auto" src="./assets/vids/sing3-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="eeIndoorTwo" preload="auto" src="./assets/vids/ee22-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="sing4" preload="auto" src="./assets/vids/sing4-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous" ></video>
-        <video id="cheers" preload="auto" src="./assets/vids/cheers-265.mp4" autoplay="false" muted loop="false" crossOrigin="anonymous" ></video>
-        
-        <img id="eggStill" src="./assets/favicon-192.png">
-        <img id="redEggStill" src="./assets/redEggIcon.png">
-		<img id="challengeText4" src="./assets/button/challengeText5.png">
-		<img id="startBtn" src="./assets/button/startBtn.png">
-        <img id="nextArrow" src="./assets/button/nextArrow.png">
-        <img id="backArrow" src="./assets/button/backArrow.png">
-        <img id="startText" src="./assets/button/startText.png">
-        <img id="victoryText2" src="./assets/button/friends.png">
-        <img id="victoryText1" src="./assets/button/victoryTextOne.png">
-        <img id="vrStartText" src="./assets/button/vrStartText.png">
-        <img id="welcomeImg" src="./assets/button/welcomeText.png">
-        <img id="finishBtn" src="./assets/button/finishBtn.png">
-		
-        <a-asset-item id="oneEgg" src="./assets/egg/mono/scene.gltf"></a-asset-item>
-		<a-asset-item id="twoEgg" src="./assets/egg/spiral/scene.gltf"></a-asset-item>
-		<a-asset-item id="threeEgg" src="./assets/egg/spot/scene.gltf"></a-asset-item>
-		<a-asset-item id="fourEgg" src="./assets/egg/stripe/scene.gltf"></a-asset-item>
-		<a-asset-item id="fiveEgg" src="./assets/egg/tone/scene.gltf"></a-asset-item>
-		<a-asset-item id="sixEgg" src="./assets/egg/zigzag/scene.gltf"></a-asset-item>
-		<a-asset-item id="sevenEgg" src="./assets/egg/danny/scene.gltf"></a-asset-item>
-		<a-asset-item id="eightEgg" src="./assets/egg/glow/scene.gltf"></a-asset-item>
-		<a-asset-item id="nineEgg" src="./assets/egg/russia/scene.gltf"></a-asset-item>
+	<a-scene id="scene" loading-screen="dotsColor: black; backgroundColor: white" shadow="enabled; autoUpdate: true" renderer="antialias: true" webxr="referenceSpaceType: local" move-into-vr init-scene-one>
+		<a-assets timeout="3000">
+			<!-- https://cdn.tangerinium.nz/ -->
+			<video id="intro" preload="true" src="https://cdn.tangerinium.nz/intro-265.mp4" autoplay="false" muted loop="false" crossOrigin="anonymous"></video>
+			<video id="eeOutdoor" preload="auto" src="https://cdn.tangerinium.nz/ee1-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="sing1" preload="auto" src="https://cdn.tangerinium.nz/sing1-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="eeIndoorOne" preload="auto" src="https://cdn.tangerinium.nz/ee21-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="sing2" preload="auto" src="https://cdn.tangerinium.nz/sing2-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="articulate" preload="auto" src="https://cdn.tangerinium.nz/articulate-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="sing3" preload="auto" src="https://cdn.tangerinium.nz/sing3-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="eeIndoorTwo" preload="auto" src="https://cdn.tangerinium.nz/ee22-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="sing4" preload="auto" src="https://cdn.tangerinium.nz/sing4-265.mp4" autoplay="false" muted loop="true" crossOrigin="anonymous"></video>
+			<video id="cheers" preload="auto" src="https://cdn.tangerinium.nz/cheers-265.mp4" autoplay="false" muted loop="false" crossOrigin="anonymous"></video>
 
-        <audio id="bing" src="./assets/magic-idea.mp3" preload="auto"></audio>
-        <audio id="ping" src="./assets/magic-acquire.mp3" preload="auto"></audio>
-        <audio id="purr" src="./assets/purr-appear.mp3" preload="auto"></audio>
+			<img id="eggStill" src="./assets/favicon-192.png">
+			<img id="redEggStill" src="./assets/redEggIcon.png">
+			<img id="challengeText4" src="./assets/button/challengeText5.png">
+			<img id="startBtn" src="./assets/button/startBtn.png">
+			<img id="nextArrow" src="./assets/button/nextArrow.png">
+			<img id="backArrow" src="./assets/button/backArrow.png">
+			<img id="startText" src="./assets/button/startText.png">
+			<img id="victoryText2" src="./assets/button/friends.png">
+			<img id="victoryText1" src="./assets/button/victoryTextOne.png">
+			<img id="vrStartText" src="./assets/button/vrStartText.png">
+			<img id="welcomeImg" src="./assets/button/welcomeText.png">
+			<img id="finishBtn" src="./assets/button/finishBtn.png">
 
-    </a-assets>
+			<a-asset-item id="oneEgg" src="./assets/egg/mono/scene.gltf"></a-asset-item>
+			<a-asset-item id="twoEgg" src="./assets/egg/spiral/scene.gltf"></a-asset-item>
+			<a-asset-item id="threeEgg" src="./assets/egg/spot/scene.gltf"></a-asset-item>
+			<a-asset-item id="fourEgg" src="./assets/egg/stripe/scene.gltf"></a-asset-item>
+			<a-asset-item id="fiveEgg" src="./assets/egg/tone/scene.gltf"></a-asset-item>
+			<a-asset-item id="sixEgg" src="./assets/egg/zigzag/scene.gltf"></a-asset-item>
+			<a-asset-item id="sevenEgg" src="./assets/egg/danny/scene.gltf"></a-asset-item>
+			<a-asset-item id="eightEgg" src="./assets/egg/glow/scene.gltf"></a-asset-item>
+			<a-asset-item id="nineEgg" src="./assets/egg/russia/scene.gltf"></a-asset-item>
 
-    <!-- VIDEOS -->
-    <a-videosphere id="videoPlayer" rotation="0 -70 0" src="#intro" visible="true" >
-    </a-videosphere>
+			<audio id="bing" src="./assets/magic-idea.mp3" preload="auto"></audio>
+			<audio id="ping" src="./assets/magic-acquire.mp3" preload="auto"></audio>
+			<audio id="purr" src="./assets/purr-appear.mp3" preload="auto"></audio>
 
-    <!-- CONTROLS -->
-    <a-entity cursor="rayOrigin: mouse" raycaster="objects: .cursor-listener"></a-entity>
+		</a-assets>
 
-    <!-- OPENING TEXT -->
-	<a-image id="welcomeText"
-	src="#startText"
-	position="0 1.53 -1"
-	visible= "true"
-	scale="1.3 1.4 1.3"
-	sound="src: #purr; volume: 0.4"
-	></a-image>
-	<a-entity id="welcomeCircle"
-	position="0 1.6 -1.1"	
-	geometry="primitive: circle; radius: 0.8; segments: 64; thetaStart: 90; thetaLength:0"
-	material="color: white"
-	animation="property: geometry.thetaLength; to: 60; dur: 500; easing: linear; loop: false"
-	animation__loaded="property: geometry.thetaLength; to: 360; dur: 500; easing: linear; loop: false; startEvents: firstVideoLoaded"
-	>
-	</a-entity>
-	<a-image id="loadedText" src="#welcomeImg"
-	position="0 1.53 -1"
-	visible= "false"
-	scale="1.3 1.4 1.3"
-	sound="src: #purr; volume: 0.4"
-	></a-image>
-	<a-image id="vrText" src="#vrStartText"
-	position="0 1.6 -1"
-	visible= "false"
-	scale="1.3 1.3 1.3"
-	sound="src: #purr; volume: 0.4"
-	></a-image>
+		<!-- VIDEOS -->
+		<a-videosphere id="videoPlayer" rotation="0 -70 0" src="#intro" visible="true">
+		</a-videosphere>
 
-	<!-- EGG MODELS -->
-	<a-entity
-		id="eggOne"
-		gltf-model="#oneEgg"	
-		position="1 1 -1" 
-		scale="0.05 0.05 0.05"
-		animation="property: rotation; to: 0 0 20; dur: 200; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.05 0.05 0.05; startEvents: raycaster-intersected-cleared; dur: 1"
-		sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-		egg-appear
-	></a-entity>
-	<a-entity
-        id="eggTwo"
-        gltf-model="#twoEgg"	
-        position="-4 0 -1" 
-        scale="0.1 0.1 0.1"
-        animation="property: rotation; to: 0 0 20; dur: 400; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.2 0.2 0.2; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1"
-        sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-    ></a-entity>
-	<a-entity
-        id="eggThree"
-        gltf-model="#threeEgg"	
-        position="2 1 -1" 
-        scale="0.05 0.05 0.05"
-        animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.05 0.05 0.05; startEvents: raycaster-intersected-cleared; dur: 1"
-        sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-    ></a-entity>
-	<a-entity
-		id="eggFour"
-		gltf-model="#fourEgg"	
-		position="1 1 3" 
-		scale="0.1 0.1 0.1"
-		animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.15 0.15 0.15; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1"
-		sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-	></a-entity>
-	<a-entity
-		id="eggFive"
-		gltf-model="#fiveEgg"	
-		position="-4 3 1" 
-		scale="0.1 0.1 0.1"
-		animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.15 0.15 0.15; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1"
-		sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-	></a-entity>
-	<a-entity
-		id="eggSix"
-		gltf-model="#sixEgg"	
-		position="5.5 1 1.5" 
-		scale="0.075 0.075 0.075"
-		animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.3 0.3 0.3; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected-cleared; dur: 1"
-		sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-	></a-entity>
-	<a-entity
-        id="eggSeven"
-        gltf-model="#sevenEgg"	
-		position="-0.8 1 -1" 
-		rotation="0 -55 0"
-		scale="4 4 4"
-        animation="property: position; to: -0.8 1.01 -1; dur: 300; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 8 8 8; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 4 4 4; startEvents: raycaster-intersected-cleared; dur: 1"
-        sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-    ></a-entity>
-	<a-entity
-        id="eggEight"
-        gltf-model="#eightEgg"	
-        position="-3 2 4" 
-        scale="0.002 0.002 0.002"
-        animation="property: position; to: -3 2.05 4; dur: 750; easing: easeInOutElastic; loop: true; elasticity: 1000"
-		animation__hover="property: scale; to: 0.005 0.005 0.005; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.002 0.002 0.002; startEvents: raycaster-intersected-cleared; dur: 1"
-        sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-    ></a-entity>
-	<a-entity
-        id="eggNine"
-        gltf-model="#nineEgg"	
-        position="2 1 1" 
-		rotation="0 240 0"
-        scale="0.4 0.4 0.4"
-        animation="property: rotation; to: 0 0 0; dur: 3000; easing: easeInOutElastic; loop: true"
-		animation__hover="property: scale; to: 0.6 0.6 0.6; startEvents: raycaster-intersected; dur: 1"
-		animation__endhover="property: scale; to: 0.4 0.4 0.4; startEvents: raycaster-intersected-cleared; dur: 1"
-        sound="src: #ping; volume: 0.6; poolSize: 10"
-		visible="false"
-		class= "cursor-listener"
-		select-egg
-    ></a-entity>
-	
-	<!-- UI: Assets in scene as Camera interferes with raycaster -->
-	<!-- CHALLENGE TEXT -->
-	<a-image id="challengeText" src="#challengeText4"
-		position="0 1.6 -1"
-		visible= "false"
-		scale="1 1.3 1"
-		class= "cursor-listener"
-		on-click-start
-	></a-image> 
-	<a-image id="startButton" 
-		src="#startBtn"
-		position="0 1.375 -0.9"
-		visible= "false"
-		scale="0.4 0.15 0.4"
-		class= "cursor-listener"
-		button-hover="button: #startButton; scale: 0.4 0.15 0.4"
-		on-click-start
-	></a-image>
+		<!-- CONTROLS -->
+		<a-entity cursor="rayOrigin: mouse" raycaster="objects: .cursor-listener"></a-entity>
 
-	<!-- PREVIOUS BUTTON -->
-	<a-image id="prevButton" src="#backArrow"
-		position="-1 1.6 -0.9"
-		visible= "false"
-		scale="0.6 0.25 1"
-		class="cursor-listener" 
-		sound="src: #purr; volume: 0.4"
-		button-hover="button: #prevButton; scale: 0.6 0.25 1"
-		play-video="currentEvent: 1"
-	></a-image>
-		
-	<!-- NEXT BUTTON -->
-	<a-image id="nextButton" src="#nextArrow"
-		position="1 1.6 -0.9"
-		visible= "false"
-		scale="0.6 0.25 1"
-		class="cursor-listener" 
-		sound="src: #purr; volume: 0.4"
-		button-hover="button: #nextButton; scale: 0.6 0.25 1"
-		play-video="currentEvent: 2"
-	></a-image>
+		<!-- OPENING TEXT -->
+		<a-image id="welcomeText" src="#startText" position="0 1.53 -1" visible="true" scale="1.3 1.4 1.3" sound="src: #purr; volume: 0.4"></a-image>
+		<a-entity id="welcomeCircle" position="0 1.6 -1.1" geometry="primitive: circle; radius: 0.8; segments: 64; thetaStart: 90; thetaLength:0" material="color: white" animation="property: geometry.thetaLength; to: 60; dur: 500; easing: linear; loop: false" animation__loaded="property: geometry.thetaLength; to: 360; dur: 500; easing: linear; loop: false; startEvents: firstVideoLoaded">
+		</a-entity>
+		<a-image id="loadedText" src="#welcomeImg" position="0 1.53 -1" visible="false" scale="1.3 1.4 1.3" sound="src: #purr; volume: 0.4"></a-image>
+		<a-image id="vrText" src="#vrStartText" position="0 1.6 -1" visible="false" scale="1.3 1.3 1.3" sound="src: #purr; volume: 0.4"></a-image>
 
-	<!-- EGG COUNTER -->
-	<a-image id="eggIconOne" src="#eggStill"
-		position="-0.1 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="eggIconTwo" src="#eggStill"
-		position="-0.2 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="eggIconThree" src="#eggStill"
-		position="-0.3 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="eggIconFour" src="#eggStill"
-		position="-0.4 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="bonusIconOne" src="#redEggStill"
-		position="-0.4 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="bonusIconTwo" src="#redEggStill"
-		position="-0.5 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<a-image id="bonusIconThree" src="#redEggStill"
-		position="-0.6 2.335 -1"
-		visible= "false"
-		scale="0.1 0.1 0.1"
-		opacity="0.2"
-	></a-image>
-	<!-- EGG TEXT -->
-	<a-entity id="eggCount" text="value:0;
+		<!-- EGG MODELS -->
+		<a-entity id="eggOne" gltf-model="#oneEgg" position="1 1 -1" scale="0.05 0.05 0.05" animation="property: rotation; to: 0 0 20; dur: 200; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.05 0.05 0.05; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg egg-appear></a-entity>
+		<a-entity id="eggTwo" gltf-model="#twoEgg" position="-4 0 -1" scale="0.1 0.1 0.1" animation="property: rotation; to: 0 0 20; dur: 400; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.2 0.2 0.2; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggThree" gltf-model="#threeEgg" position="2 1 -1" scale="0.05 0.05 0.05" animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.05 0.05 0.05; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggFour" gltf-model="#fourEgg" position="1 1 3" scale="0.1 0.1 0.1" animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.15 0.15 0.15; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggFive" gltf-model="#fiveEgg" position="-4 3 1" scale="0.1 0.1 0.1" animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.15 0.15 0.15; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.1 0.1 0.1; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggSix" gltf-model="#sixEgg" position="5.5 1 1.5" scale="0.075 0.075 0.075" animation="property: rotation; to: 0 0 20; dur: 600; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.3 0.3 0.3; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.075 0.075 0.075; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggSeven" gltf-model="#sevenEgg" position="-0.8 1 -1" rotation="0 -55 0" scale="4 4 4" animation="property: position; to: -0.8 1.01 -1; dur: 300; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 8 8 8; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 4 4 4; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggEight" gltf-model="#eightEgg" position="-3 2 4" scale="0.002 0.002 0.002" animation="property: position; to: -3 2.05 4; dur: 750; easing: easeInOutElastic; loop: true; elasticity: 1000" animation__hover="property: scale; to: 0.005 0.005 0.005; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.002 0.002 0.002; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+		<a-entity id="eggNine" gltf-model="#nineEgg" position="2 1 1" rotation="0 240 0" scale="0.4 0.4 0.4" animation="property: rotation; to: 0 0 0; dur: 3000; easing: easeInOutElastic; loop: true" animation__hover="property: scale; to: 0.6 0.6 0.6; startEvents: raycaster-intersected; dur: 1" animation__endhover="property: scale; to: 0.4 0.4 0.4; startEvents: raycaster-intersected-cleared; dur: 1" sound="src: #ping; volume: 0.6; poolSize: 10" visible="false" class="cursor-listener" select-egg></a-entity>
+
+		<!-- UI: Assets in scene as Camera interferes with raycaster -->
+		<!-- CHALLENGE TEXT -->
+		<a-image id="challengeText" src="#challengeText4" position="0 1.6 -1" visible="false" scale="1 1.3 1" class="cursor-listener" on-click-start></a-image>
+		<a-image id="startButton" src="#startBtn" position="0 1.375 -0.9" visible="false" scale="0.4 0.15 0.4" class="cursor-listener" button-hover="button: #startButton; scale: 0.4 0.15 0.4" on-click-start></a-image>
+
+		<!-- PREVIOUS BUTTON -->
+		<a-image id="prevButton" src="#backArrow" position="-1 1.6 -0.9" visible="false" scale="0.6 0.25 1" class="cursor-listener" sound="src: #purr; volume: 0.4" button-hover="button: #prevButton; scale: 0.6 0.25 1" play-video="currentEvent: 1"></a-image>
+
+		<!-- NEXT BUTTON -->
+		<a-image id="nextButton" src="#nextArrow" position="1 1.6 -0.9" visible="false" scale="0.6 0.25 1" class="cursor-listener" sound="src: #purr; volume: 0.4" button-hover="button: #nextButton; scale: 0.6 0.25 1" play-video="currentEvent: 2"></a-image>
+
+		<!-- EGG COUNTER -->
+		<a-image id="eggIconOne" src="#eggStill" position="-0.1 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="eggIconTwo" src="#eggStill" position="-0.2 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="eggIconThree" src="#eggStill" position="-0.3 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="eggIconFour" src="#eggStill" position="-0.4 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="bonusIconOne" src="#redEggStill" position="-0.4 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="bonusIconTwo" src="#redEggStill" position="-0.5 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<a-image id="bonusIconThree" src="#redEggStill" position="-0.6 2.335 -1" visible="false" scale="0.1 0.1 0.1" opacity="0.2"></a-image>
+		<!-- EGG TEXT -->
+		<a-entity id="eggCount" text="value:0;
 		align: center;
 		width:3;
 		color: pink;
-		font: dejavu;"
-		position="0 2.35 -1"
-		visible= "false"
-		sound="src: #bing; volume: 0.6; poolSize: 10"
-	></a-entity>
+		font: dejavu;" position="0 2.35 -1" visible="false" sound="src: #bing; volume: 0.6; poolSize: 10"></a-entity>
 
-	<!-- VICTORY TEXT -->  
-	<a-image id="victoryText" 
-		src="#victoryText1"
-		position="0 1.4 -1"
-		visible= "false"
-		scale="1.2 1.6 1"
-	></a-image>
-	<a-image id="friendsButton" 
-		src="#victoryText2"
-		position="-0.03 1.38 -0.9"
-		visible= "false"
-		scale="0.75 0.275 1"
-		class= "cursor-listener"
-		button-hover="button: #friendsButton; scale: 0.75 0.275 1"
-	></a-image>
+		<!-- VICTORY TEXT -->
+		<a-image id="victoryText" src="#victoryText1" position="0 1.4 -1" visible="false" scale="1.2 1.6 1"></a-image>
+		<a-image id="friendsButton" src="#victoryText2" position="-0.03 1.38 -0.9" visible="false" scale="0.75 0.275 1" class="cursor-listener" button-hover="button: #friendsButton; scale: 0.75 0.275 1"></a-image>
 
-  </a-scene>
+	</a-scene>
 </body>
+
 </html>
